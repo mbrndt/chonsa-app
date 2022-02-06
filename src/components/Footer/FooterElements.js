@@ -18,7 +18,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 1% auto;
   /* background: red; */
 `;
 

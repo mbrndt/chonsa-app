@@ -5,14 +5,18 @@ const Home = () => {
   return (
     <>
       <div id="wrapper">
-        <div className="home">
+        <div className="basic-outline">
           {/* grid one: calendar and journal */}
           <div className="grid_1">
             {/* calendar */}
             <div id="calendar">
               <p>calendar</p>
-              <div id="calendar-placeholder"></div>
-              <img src={require("./assets/pictures/calendar_box.png")} alt="" />
+              <div id="calendar-placeholder">
+                <img
+                  src={require("./assets/pictures/calendar_box.png")}
+                  alt=""
+                />
+              </div>
             </div>
             {/* journal */}
             <div id="journal">

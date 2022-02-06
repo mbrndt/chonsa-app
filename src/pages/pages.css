@@ -5,6 +5,7 @@
   --lav_pink: #f1e8ef;
   --lav_light_gray: #e8e9f1;
   --lav_light_blue: #cbd0e7;
+  --lav_evenmorelight_blue: #c6d6ec;
 }
 
 /* white colour aesthetics */
@@ -24,7 +25,9 @@ body {
   background-color: white;
 }
 
-.home {
+/* Homepage                                            */
+
+.basic-outline {
   position: relative;
   min-height: 100vh;
   width: auto;
@@ -33,6 +36,7 @@ body {
   flex-direction: row;
   padding-bottom: 2.5rem;
   background-color: white;
+  border: 3px solid blueviolet;
 }
 
 .grid_1,
@@ -42,7 +46,7 @@ body {
   width: 25%;
   height: 100%;
   margin: 2%;
-  /* border: 3px solid #e8e9f1; */
+  border: 3px solid #e8e9f1;
   border-radius: 25px;
   align-items: center;
   text-align: center;
@@ -69,11 +73,12 @@ img {
   border-radius: 5%;
   padding: 5% 0% 0% 0%;
 }
-/* 
+
 #calendar-placeholder {
-  width: 100%;
-  
-} */
+  width: 70%;
+  margin-left: 15%;
+  padding-bottom: 5%;
+}
 
 #journal {
   background-color: var(--lav_light_gray);
@@ -134,4 +139,47 @@ img {
   margin: 20% 0% 20% 0%;
   border-radius: 5%;
   padding: 5% 0% 5% 0%;
+}
+
+/* Sign In + Sign Up Page                                       */
+
+.signin-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: auto;
+  position: relative;
+
+  margin-bottom: -110px;
+
+  padding-bottom: 2.5rem;
+  background-color: white;
+  border: 3px solid blueviolet;
+}
+
+#signup-box,
+#signin-box {
+  width: 100px;
+  height: 100px;
+}
+
+#signin-box {
+  background-color: var(--lav_pink);
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  border-radius: 5%;
+}
+
+#signup-box {
+  background-color: var(--lav_evenmorelight_blue);
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  border-radius: 5%;
+}
+#sns-auth {
+  display: flex;
+  justify-content: space-around;
 }

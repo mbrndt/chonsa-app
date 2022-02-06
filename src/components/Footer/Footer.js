@@ -16,7 +16,7 @@ const Footer = () => {
           <Column></Column>
         </Row>
         <Row>
-          <Column>icon</Column>
+          <Column>icon icon icon icon</Column>
           <Column>2022 all rights reserved, chonsa</Column>
         </Row>
       </Container>
