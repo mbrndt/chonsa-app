@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@900&display=swap");
 
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  width: 100%;
   font-family: "Josefin Sans", sans-serif;
+
+  border: 3px solid greenyellow;
 }
 
-/* nav {
-  background-color: #e8e9f1;
-  position: absolute;
+.empty-space {
+  border: 3px solid blue;
+  height: 10vh;
   width: 100%;
-  height: 50px;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
+}

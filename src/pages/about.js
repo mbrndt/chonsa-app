@@ -10,10 +10,12 @@ const About = () => {
         height: "100vh",
       }}
     >
-      <h1>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Exercitationem, totam.
-      </h1>
+      <div>
+        <h1>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitati
+          onem, totam.
+        </h1>
+      </div>
     </div>
   );
 };

@@ -26,6 +26,7 @@ function App() {
         </Routes>
 
         {/* // Navbar End */}
+
         <Footer />
       </Router>
     </div>
