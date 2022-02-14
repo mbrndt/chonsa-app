@@ -40,8 +40,8 @@ img {
   flex-direction: row; */
   padding-bottom: 20%;
 
-  background-color: white;
-  border: 3px solid blueviolet;
+  /* background-color: white;
+  border: 3px solid blueviolet; */
 }
 
 .grid_1,
@@ -53,7 +53,7 @@ img {
   flex-direction: column;
   /* height: 100%; */
   margin: 2%;
-  border: 3px solid #e8e9f1;
+  /* border: 3px solid #e8e9f1; */
   border-radius: 25px;
   align-items: center;
   text-align: center;

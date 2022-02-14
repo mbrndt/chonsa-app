@@ -6,7 +6,7 @@ export const Box = styled.div`
   width: 100%;
   height: 50px;
   background-color: #cbd0e7;
-  border: 3px solid red;
+  ${"" /* border: 3px solid red; */}
 
   @media (max-width: 1000px) {
     padding: 70px 30px;

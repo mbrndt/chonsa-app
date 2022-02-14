@@ -1,0 +1,56 @@
+.Pomodoro {
+  margin: 20%;
+  /* border: 3px solid green; */
+}
+
+.PomSettings {
+  /* border: 3px solid green; */
+  line-height: 2rem;
+  margin: 1rem;
+}
+
+.slider {
+  height: 2rem;
+  border: 2px solid var(--lav_evenmorelight_blue);
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.slider.break {
+  border: 2px solid #9ba2c0;
+}
+
+.thumb {
+  background-color: var(--lav_light_blue);
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+}
+
+.slider.break .thumb {
+  background-color: #9ba2c0;
+}
+
+button {
+  background-color: transparent;
+  color: var(--lav_light_blue);
+  border: 0;
+  display: inline-block;
+  width: 30%;
+  margin-top: 1rem;
+  /* border: 3px solid green; */
+  cursor: pointer;
+}
+
+.Backbutton {
+  margin: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

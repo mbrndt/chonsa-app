@@ -1,7 +1,14 @@
 import React from "react";
 import "./pages.css";
+import { Pomodoro } from "../components/Pomodoro-Timer/Pomodoro";
+import { PomodoroSettings } from "../components/Pomodoro-Timer/PomodoroSettings";
+import { useState } from "react";
+import { PomSettingsContext } from "../context/PomSettingsContext";
 
 const Home = () => {
+  const [showSettings, setShowSettings] = useState(false);
+  const [workMinutes, setWorkMinutes] = useState(25);
+  const [breakMinutes, setBreakMinutes] = useState(10);
   return (
     <>
       <div id="wrapper">
@@ -63,7 +70,21 @@ const Home = () => {
               />
             </div>
             <div id="collection-boxes">collection boxes</div>
-            <div id="pomodoro-timer">pomodoro timer</div>
+            <div id="pomodoro-timer">
+              <p>pomodoro timer</p>
+              <PomSettingsContext.Provider
+                value={{
+                  showSettings,
+                  setShowSettings,
+                  workMinutes,
+                  breakMinutes,
+                  setWorkMinutes,
+                  setBreakMinutes,
+                }}
+              >
+                {showSettings ? <PomodoroSettings /> : <Pomodoro />}
+              </PomSettingsContext.Provider>
+            </div>
           </div>
 
           <div className="grid_4">

@@ -11,7 +11,3 @@ body {
   min-height: 100%;
   position: relative;
 }
-
-#body {
-  padding-bottom: 100px; /* height of footer */
-}

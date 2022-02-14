@@ -28,6 +28,7 @@ function App() {
 
         {/* // Navbar End */}
         <Toaster />
+
         <Footer />
       </Router>
     </div>
