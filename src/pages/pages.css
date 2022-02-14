@@ -51,8 +51,7 @@ img {
   /* /* width: 25%; */
   display: flex;
   flex-direction: column;
-
-  height: 100%;
+  /* height: 100%; */
   margin: 2%;
   border: 3px solid #e8e9f1;
   border-radius: 25px;
@@ -63,7 +62,7 @@ img {
 }
 
 img {
-  width: 100%;
+  /* width: 100%; */
   height: 25%;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -90,11 +89,20 @@ img {
 
 #journal {
   background-color: var(--lav_light_gray);
-  width: 100%;
-  height: 60%;
+  width: auto;
+  /* height: 60%; */
   margin: 20% 0% 0% 0%;
   border-radius: 5%;
-  padding: 5% 0% 5% 0%;
+  /* padding: 5% 0% 5% 0%; */
+  padding: 1em;
+}
+
+.text-box {
+  width: 80%;
+  height: 80%;
+  background-color: var(--lav_evenmorelight_blue);
+  display: inline-block;
+  align-items: center;
 }
 
 #task-box {
