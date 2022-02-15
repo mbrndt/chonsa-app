@@ -1,4 +1,5 @@
 import React from "react";
+import { signInWithGoogle } from "../components/Auth/firebase";
 import "./pages.css";
 
 function SignIn() {
@@ -10,8 +11,8 @@ function SignIn() {
           <div id="signin-box">
             <p>SignIn</p>
             <div id="sns-auth">
-              <p>or using these:</p>
-              <p>icon icon icon</p>
+              <p>or sign in with google:</p>
+              <button onClick={signInWithGoogle}>Google</button>
             </div>
             <div id="signIn-box"></div>
           </div>
