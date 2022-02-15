@@ -6,7 +6,7 @@ import { useState } from "react";
 import { PomSettingsContext } from "../context/PomSettingsContext";
 
 const Home = () => {
-  const [showSettings, setShowSettings] = useState(false);
+  const [showSettings, setShowSettings] = useState(true);
   const [workMinutes, setWorkMinutes] = useState(25);
   const [breakMinutes, setBreakMinutes] = useState(10);
   return (

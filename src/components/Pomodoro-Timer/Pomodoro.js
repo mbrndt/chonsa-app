@@ -19,30 +19,24 @@ export const Pomodoro = () => {
   const isPausedRef = useRef(isPaused);
   const modeRef = useRef(mode);
 
-  function switchMode() {
-    const nextMode = modeRef.current === "work" ? "break" : "work";
-    const nextSeconds =
-      nextMode === "work"
-        ? settingsInfo.workMinutes * 60
-        : settingsInfo.breakMinutes * 60;
-
-    setMode(nextMode);
-    modeRef.current = nextMode;
-
-    setSecondsLeft(nextSeconds);
-    secondsLeftRef.current = nextSeconds;
-  }
-
-  function initTimer() {
-    setSecondsLeft(settingsInfo.workMinutes * 60);
-  }
   function tick() {
     secondsLeftRef.current--;
     setSecondsLeft(secondsLeftRef.current);
   }
-
   useEffect(() => {
-    initTimer();
+    function switchMode() {
+      const nextMode = modeRef.current === "work" ? "break" : "work";
+      const nextSeconds =
+        nextMode === "work"
+          ? settingsInfo.workMinutes * 60
+          : settingsInfo.breakMinutes * 60;
+
+      setMode(nextMode);
+      modeRef.current = nextMode;
+
+      setSecondsLeft(nextSeconds);
+      secondsLeftRef.current = nextSeconds;
+    }
 
     const interval = setInterval(() => {
       if (isPausedRef.current) {
@@ -52,7 +46,7 @@ export const Pomodoro = () => {
         return switchMode();
       }
       tick();
-    }, 100);
+    }, 1000);
     return () => clearInterval(interval);
   }, [settingsInfo]);
 
