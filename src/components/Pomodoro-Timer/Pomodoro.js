@@ -8,13 +8,11 @@ import { Playbutton } from "../../pages/assets/Playbutton";
 import { PomSettingsContext } from "../../context/PomSettingsContext";
 import("./PomodoroElements.css");
 
-const percentage = 66;
-
 export const Pomodoro = () => {
   const settingsInfo = useContext(PomSettingsContext);
 
-  const [isPaused, setIsPaused] = useState(false);
-  const [mode, setMode] = useState("work"); //work/break/null
+  const [isPaused, setIsPaused] = useState(true);
+  const [mode, setMode] = useState("break"); //work/break/null
   const [secondsLeft, setSecondsLeft] = useState(0);
 
   const secondsLeftRef = useRef(secondsLeft);
@@ -22,59 +20,95 @@ export const Pomodoro = () => {
   const modeRef = useRef(mode);
 
   function switchMode() {
-    const nextMode = mode === "work" ? "break" : "work";
+    const nextMode = modeRef.current === "work" ? "break" : "work";
     const nextSeconds =
       nextMode === "work"
         ? settingsInfo.workMinutes * 60
         : settingsInfo.breakMinutes * 60;
+
     setMode(nextMode);
+    modeRef.current = nextMode;
+
     setSecondsLeft(nextSeconds);
+    secondsLeftRef.current = nextSeconds;
   }
 
   function initTimer() {
     setSecondsLeft(settingsInfo.workMinutes * 60);
   }
   function tick() {
-    setSecondsLeft(secondsLeft - 1);
+    secondsLeftRef.current--;
+    setSecondsLeft(secondsLeftRef.current);
   }
 
   useEffect(() => {
     initTimer();
 
-    setInterval(() => {
-      if (isPaused) {
+    const interval = setInterval(() => {
+      if (isPausedRef.current) {
         return;
       }
-      if (secondsLeft === 0) {
+      if (secondsLeftRef.current === 0) {
         return switchMode();
       }
       tick();
-    }, 1000);
+    }, 100);
+    return () => clearInterval(interval);
   }, [settingsInfo]);
+
+  const totalSeconds =
+    mode === "work"
+      ? settingsInfo.workMinutes * 60
+      : settingsInfo.breakMinutes * 60;
+
+  const percentage = Math.round((secondsLeft / totalSeconds) * 100);
+
+  const minutes = Math.floor(secondsLeft / 60);
+  let seconds = secondsLeft % 60;
+  if (seconds < 10) seconds = "0" + seconds;
 
   return (
     <div className="Pomodoro">
+      <div>
+        <p>
+          {mode === "work"
+            ? `time to concentrate! `
+            : "good job! break time is over in:"}
+        </p>
+      </div>
       <CircularProgressbar
         className="CircleProgBar"
         value={percentage}
-        text={`${percentage}%`}
+        text={minutes + ":" + seconds}
         styles={buildStyles({
           rotation: 0.25,
           strokeLinecap: "round",
           textSize: "30px",
           pathTransitionDuration: 0.5,
-          pathColor: `#cbd0e7`,
-          textColor: "#B1B7D1",
-          trailColor: "#d6d6d6",
+          pathColor: mode === "work" ? `#cbd0e7` : "#9B9FB5",
+          textColor: mode === "work" ? "#B1B7D1" : "#8C7284",
+          trailColor: mode === "work" ? `#d6d6d6` : "#8C7284",
           backgroundColor: "#3e98c7",
         })}
       />
 
       <div>
         {isPaused ? (
-          <Playbutton onClick={() => toast.success("let's go!")} />
+          <Playbutton
+            onClick={() => {
+              setIsPaused(false);
+              isPausedRef.current = false;
+              toast.success("let's go!");
+            }}
+          />
         ) : (
-          <Pausebutton onClick={() => toast.success("brakes are on!")} />
+          <Pausebutton
+            onClick={() => {
+              setIsPaused(true);
+              isPausedRef.current = true;
+              toast.success("paused!");
+            }}
+          />
         )}
 
         <CogIcon onClick={() => settingsInfo.setShowSettings(true)} />
