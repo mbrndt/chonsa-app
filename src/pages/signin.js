@@ -1,6 +1,7 @@
 import React from "react";
-import { signInWithGoogle } from "../components/Auth/firebase";
+import { signInWithGoogle } from "../Auth/firebase";
 import "./pages.css";
+import Loader from "../components/Loader";
 
 function SignIn() {
   return (
@@ -16,6 +17,7 @@ function SignIn() {
             </div>
             <div id="signIn-box"></div>
           </div>
+          <Loader />
 
           {/* SignIn */}
           <div id="signup-box">
