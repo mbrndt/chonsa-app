@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@mantine/core";
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitati
           onem, totam.
         </h1>
+        <Button>Hello world!</Button>
       </div>
     </div>
   );
