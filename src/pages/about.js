@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@mantine/core";
+import JournalQuill from "../components/journal";
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
           onem, totam.
         </h1>
         <Button>Hello world!</Button>
+        <JournalQuill />
       </div>
     </div>
   );

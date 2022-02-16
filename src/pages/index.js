@@ -4,6 +4,7 @@ import { Pomodoro } from "../components/Pomodoro-Timer/Pomodoro";
 import { PomodoroSettings } from "../components/Pomodoro-Timer/PomodoroSettings";
 import { useState } from "react";
 import { PomSettingsContext } from "../context/PomSettingsContext";
+import JournalQuill from "../components/journal";
 
 const Home = () => {
   const [showSettings, setShowSettings] = useState(true);
@@ -29,11 +30,7 @@ const Home = () => {
             <div id="journal">
               <p>journal</p>
               <div className="text-box">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Aliquam, aenean morbi quisque luctus in habitant elit nibh
-                pellentesque. Dignissim ut ultrices euismod nunc cras elementum
-                faucibus dolor. Tortor urna sed aliquam velit pulvinar feugiat.
-                Amet felis donec pellentesque aliquam.
+                <JournalQuill />
               </div>
             </div>
           </div>
