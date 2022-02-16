@@ -2,8 +2,7 @@ import { useState } from "react";
 
 import { RichTextEditor } from "@mantine/rte";
 
-const initialValue =
-  "<p>Your initial <b>html value</b> or an empty string to init editor without value</p>";
+const initialValue = "<p>write here ... ✍️</p>";
 
 function JournalQuill() {
   const [value, onChange] = useState(initialValue);

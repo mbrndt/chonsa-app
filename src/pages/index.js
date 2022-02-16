@@ -5,6 +5,8 @@ import { PomodoroSettings } from "../components/Pomodoro-Timer/PomodoroSettings"
 import { useState } from "react";
 import { PomSettingsContext } from "../context/PomSettingsContext";
 import JournalQuill from "../components/journal";
+import { Button } from "@mantine/core";
+import { LinkButton } from "../components/LinkButton";
 
 const Home = () => {
   const [showSettings, setShowSettings] = useState(true);
@@ -32,6 +34,7 @@ const Home = () => {
               <div className="text-box">
                 <JournalQuill />
               </div>
+              <Button variant="light">save</Button>
             </div>
           </div>
 
