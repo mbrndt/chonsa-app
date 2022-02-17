@@ -1,5 +1,5 @@
 import React from "react";
-import { signInWithGoogle } from "../Firebase";
+import { signInWithGoogle } from "../firebase";
 import "./pages.css";
 import Loader from "../components/Loader";
 

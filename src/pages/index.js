@@ -5,9 +5,9 @@ import { PomodoroSettings } from "../components/Pomodoro-Timer/PomodoroSettings"
 import { useState } from "react";
 import { PomSettingsContext } from "../context/PomSettingsContext";
 import JournalQuill from "../components/journal";
-import { Button } from "@mantine/core";
-import { LinkButton } from "../components/LinkButton";
+import { Button, Container } from "@mantine/core";
 import { CalendarComp } from "../components/Calendar";
+import { CollectionBoxes } from "../components/CollectionBoxes";
 
 const Home = () => {
   const [showSettings, setShowSettings] = useState(true);
@@ -62,7 +62,14 @@ const Home = () => {
             <div id="task-box">
               task box
               <p>
-                <div></div>
+                <div>
+                  <Container>
+                    18.12.2021 Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Aliquam, aenean morbi quisque luctus in
+                    habitant elit nibh pellentesque. Dignissim ut ultrices
+                    euismod nunc cras elementum faucibus dolor.
+                  </Container>
+                </div>
               </p>
             </div>
             <div id="cleaning-zone">
@@ -81,6 +88,7 @@ const Home = () => {
             </div>
             <div id="collection-boxes">
               <p>collection boxes</p>
+              <CollectionBoxes />
             </div>
             <div id="pomodoro-timer">
               <p>pomodoro timer</p>

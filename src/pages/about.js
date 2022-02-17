@@ -1,6 +1,7 @@
 import React from "react";
-import { Button } from "@mantine/core";
+import { Button } from "react-bootstrap";
 import JournalQuill from "../components/journal";
+import "./pages.css";
 
 const About = () => {
   return (
@@ -17,7 +18,7 @@ const About = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitati
           onem, totam.
         </h1>
-        <Button>Hello world!</Button>
+        <Button className="collectionButton">Hello world!</Button>
         <JournalQuill />
       </div>
     </div>
