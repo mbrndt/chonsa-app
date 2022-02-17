@@ -14,7 +14,6 @@
 
 #wrapper {
   background-color: white;
-  padding-bottom: 15%;
 }
 
 img {
@@ -25,7 +24,8 @@ img {
 /* Homepage                                            */
 
 .basic-outline {
-  margin: 1rem auto;
+  margin: auto;
+  margin-top: 1%;
   width: min(95%);
   display: grid;
   grid-auto-flow: column;

@@ -62,23 +62,13 @@ const Home = () => {
             <div id="task-box">
               task box
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Aliquam, aenean morbi quisque luctus in habitant elit nibh
-                pellentesque. Dignissim ut ultrices euismod nunc cras elementum
-                faucibus dolor. Tortor urna sed aliquam velit pulvinar feugiat.
-                Amet felis donec pellentesque aliquam.
+                <div></div>
               </p>
             </div>
             <div id="cleaning-zone">
               {" "}
               current cleaning zone
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Aliquam, aenean morbi quisque luctus in habitant elit nibh
-                pellentesque. Dignissim ut ultrices euismod nunc cras elementum
-                faucibus dolor. Tortor urna sed aliquam velit pulvinar feugiat.
-                Amet felis donec pellentesque aliquam.
-              </p>
+              <p></p>
             </div>
           </div>
 
@@ -89,7 +79,9 @@ const Home = () => {
                 alt="fireSpot"
               />
             </div>
-            <div id="collection-boxes">collection boxes</div>
+            <div id="collection-boxes">
+              <p>collection boxes</p>
+            </div>
             <div id="pomodoro-timer">
               <p>pomodoro timer</p>
               <PomSettingsContext.Provider
