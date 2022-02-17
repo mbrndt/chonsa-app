@@ -7,6 +7,7 @@ import { PomSettingsContext } from "../context/PomSettingsContext";
 import JournalQuill from "../components/journal";
 import { Button } from "@mantine/core";
 import { LinkButton } from "../components/LinkButton";
+import { CalendarComp } from "../components/Calendar";
 
 const Home = () => {
   const [showSettings, setShowSettings] = useState(true);
@@ -19,13 +20,10 @@ const Home = () => {
           {/* grid one: calendar and journal */}
           <div className="grid_1">
             {/* calendar */}
-            <div id="calendar">
+            <div className="calendar">
               <p>calendar</p>
-              <div id="calendar-placeholder">
-                <img
-                  src={require("./assets/pictures/calendar_box.png")}
-                  alt=""
-                />
+              <div id="calendar--comp">
+                <CalendarComp />
               </div>
             </div>
             {/* journal */}
@@ -33,8 +31,19 @@ const Home = () => {
               <p>journal</p>
               <div className="text-box">
                 <JournalQuill />
+
+                <Button style={{ marginRight: 10 }} variant="light" radius="xl">
+                  save
+                </Button>
+
+                <Button
+                  style={{ marginLeft: 10, marginBottom: 10 }}
+                  variant="light"
+                  radius="xl"
+                >
+                  see older posts
+                </Button>
               </div>
-              <Button variant="light">save</Button>
             </div>
           </div>
 
