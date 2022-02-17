@@ -25,6 +25,17 @@ const Home = () => {
               <div id="calendar--comp">
                 <CalendarComp />
               </div>
+              <Button style={{ marginRight: 10 }} variant="light" radius="xl">
+                create new
+              </Button>
+
+              <Button
+                style={{ marginLeft: 10, marginBottom: 10 }}
+                variant="light"
+                radius="xl"
+              >
+                open calendar{" "}
+              </Button>
             </div>
             {/* journal */}
             <div id="journal">
