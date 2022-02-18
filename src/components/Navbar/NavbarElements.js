@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   background: rgba(177, 183, 209, 0.3);
-  height: 85px;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
+  padding: 0.2rem calc((100% - 1000px) / 2);
   z-index: 12;
 `;
 export const NavLogo = styled(Link)`

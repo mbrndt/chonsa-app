@@ -9,6 +9,7 @@ import Contact from "./pages/contact";
 import SignUp from "./pages/signup";
 import SignIn from "./pages/signin";
 import { Toaster } from "react-hot-toast";
+import { JournalPage } from "./pages/JournalPage";
 
 function App() {
   //
@@ -22,7 +23,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-
+          <Route path="src/pages/JournalPage.js" element={<JournalPage />} />
           <Route path="/signin" element={<SignIn />} />
 
           <Route path="/sign-up" element={<SignUp />} />

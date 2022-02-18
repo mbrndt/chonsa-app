@@ -16,49 +16,28 @@
   background-color: white;
 }
 
-img {
-  height: 200px;
-  width: auto;
-}
-
 /* Homepage                                            */
 
 .basic-outline {
-  margin: auto;
-  margin-top: 1%;
-  width: min(95%);
-  display: grid;
-  grid-auto-flow: column;
-  gap: 3rem;
-  min-height: 100vh;
-  max-height: 200vh;
-
+  display: flex;
+  height: 150vh;
+  align-items: flex-start;
   padding-bottom: 20%;
-
-  /* background-color: white;
-  border: 3px solid blueviolet; */
 }
 
 .grid_1,
 .grid_2,
 .grid_3,
 .grid_4 {
-  display: flex;
-  flex-direction: column;
   margin: 2%;
   /* border: 3px solid #e8e9f1; */
   border-radius: 25px;
   align-items: center;
   text-align: center;
+  flex: 0 1 calc(25% - 1em);
 }
 
 img {
-  min-height: 25%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  border-image: 10%;
-  align-items: center;
-
   border-radius: 5%;
 }
 

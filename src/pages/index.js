@@ -1,13 +1,20 @@
-import React from "react";
+//css
 import "./pages.css";
+//react, martine
+import { Link } from "react-router-dom";
+import { React, useState } from "react";
+import { Button, Container } from "@mantine/core";
+// context
+import { PomSettingsContext } from "../context/PomSettingsContext";
+// components
 import { Pomodoro } from "../components/Pomodoro-Timer/Pomodoro";
 import { PomodoroSettings } from "../components/Pomodoro-Timer/PomodoroSettings";
-import { useState } from "react";
-import { PomSettingsContext } from "../context/PomSettingsContext";
 import JournalQuill from "../components/journal";
-import { Button, Container } from "@mantine/core";
 import { CalendarComp } from "../components/Calendar";
 import { CollectionBoxes } from "../components/CollectionBoxes";
+import { JournalPage } from "./JournalPage";
+//
+//
 
 const Home = () => {
   const [showSettings, setShowSettings] = useState(true);
@@ -34,7 +41,7 @@ const Home = () => {
                 variant="light"
                 radius="xl"
               >
-                open calendar{" "}
+                open calendar
               </Button>
             </div>
             {/* journal */}
@@ -47,7 +54,11 @@ const Home = () => {
                   save
                 </Button>
 
+                {/* <JournalPage /> */}
+
                 <Button
+                  component={Link}
+                  to="src/pages/JournalPage.js"
                   style={{ marginLeft: 10, marginBottom: 10 }}
                   variant="light"
                   radius="xl"
