@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
@@ -31,8 +30,6 @@ function App() {
 
         {/* // Navbar End */}
         <Toaster />
-
-        <Footer />
       </Router>
     </div>
   );
