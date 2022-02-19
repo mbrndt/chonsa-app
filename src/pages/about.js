@@ -1,7 +1,9 @@
-import React from "react";
+import { React } from "react";
 import { Button } from "react-bootstrap";
 import JournalQuill from "../components/journal";
 import "./pages.css";
+import { db } from "/Users/mareikebrandt/Desktop/projekte/react/chonsa_react/chonsa-app/src/firebase.js";
+import { collection, getDocs } from "firebase/firestore";
 
 const About = () => {
   return (
@@ -19,7 +21,6 @@ const About = () => {
           onem, totam.
         </h1>
         <Button className="collectionButton">Hello world!</Button>
-        <JournalQuill />
       </div>
     </div>
   );

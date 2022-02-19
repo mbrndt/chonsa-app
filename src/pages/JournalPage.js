@@ -1,18 +1,31 @@
-import React from "react";
-import JournalQuill from "../components/journal";
+import { React, useState, useEffect } from "react";
+import { RichTextEditor } from "@mantine/rte";
+
 import { Divider, ScrollArea, Button } from "@mantine/core";
 import "../pages/JournalPage.css";
+import { db } from "/Users/mareikebrandt/Desktop/projekte/react/chonsa_react/chonsa-app/src/firebase.js";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 
 export const JournalPage = () => {
+  const [journalEntry, setJournalEntry] = useState([]);
+  const journalCollectionRef = collection(db, "journalEntry");
+
+  useEffect(() => {
+    const getJournal = async () => {
+      const data = await getDocs(journalCollectionRef);
+      setJournalEntry(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getJournal();
+  }, []);
   return (
     <div className="journal_body">
       <ScrollArea className="journal" type="always" offsetScrollbars>
         {
           <div className="journal">
+            {/* <div>{Date}</div> */}
             <p>new entry:</p>
 
-            <JournalQuill />
-
+            <RichTextEditor placeholder={"Write here"} />
             <div>
               <Button style={{}} variant="light" radius="xl">
                 save
@@ -26,52 +39,15 @@ export const JournalPage = () => {
         {
           <div className="entries">
             <p>old entries:</p>
-
-            <p>
-              yesterday, xx.xx.xx.
-              <br></br>
-              <br></br>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam,
-              aenean morbi quisque luctus in habitant elit nibh pellentesque.
-              Dignissim ut ultrices euismod nunc cras elementum faucibus dolor.
-              Tortor urna sed aliquam velit pulvinar feugiat. Amet felis donec
-              pellentesque aliquam.
-            </p>
-            <div>
-              <img
-                src={require("./assets/pictures/kris-atomic-3b2tADGAWnU-unsplash.jpg")}
-                alt="Table in a cafe, you can see a french press, a coffee cup and a floral pot on the table and a big window in the background"
-              />
-              <br></br>
-              <div>
-                <img
-                  src={require("./assets/pictures/lasse-jensen-84mFDd6bZG4-unsplash.jpg")}
-                  alt="well lit bookshop with white bookshelves, old carpet and white exposed beams on the ceiling"
-                />
-              </div>
-            </div>
-            <Divider />
-            <p>
-              tuesday, xx.xx.xx.
-              <br></br>
-              <br></br>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam,
-              aenean morbi quisque luctus in habitant elit nibh pellentesque.
-              Dignissim ut ultrices euismod nunc cras elementum faucibus dolor.
-              Tortor urna sed aliquam velit pulvinar feugiat. Amet felis donec
-              pellentesque aliquam.
-            </p>
-            <Divider />
-            <p>
-              sunday, xx.xx.xx.
-              <br></br>
-              <br></br>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam,
-              aenean morbi quisque luctus in habitant elit nibh pellentesque.
-              Dignissim ut ultrices euismod nunc cras elementum faucibus dolor.
-              Tortor urna sed aliquam velit pulvinar feugiat. Amet felis donec
-              pellentesque aliquam.
-            </p>
+            {journalEntry.map((journal) => {
+              return (
+                <div>
+                  {/* <h1>date: {journal.date}</h1> */}
+                  <p> {journal.content}</p>
+                  <Divider />
+                </div>
+              );
+            })}
           </div>
         }
       </ScrollArea>
