@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -24,7 +24,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="src/pages/JournalPage.js" element={<JournalPage />} />
           <Route path="/signin" element={<SignIn />} />
-
           <Route path="/sign-up" element={<SignUp />} />
         </Routes>
 
