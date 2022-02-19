@@ -8,7 +8,7 @@ export const CollectionBoxes = () => {
     <div className="Boxes">
       <Paper
         component={Link}
-        to="src/pages/contact.js"
+        to="src/pages/CollectionPages/RecipesCollection.js"
         className="Card"
         padding="xl"
         shadow="xs"
@@ -16,15 +16,33 @@ export const CollectionBoxes = () => {
         <Text>recipe</Text>
       </Paper>
 
-      <Paper className="Card" padding="xl" shadow="xs">
+      <Paper
+        component={Link}
+        to="src/pages/CollectionPages/StudyNotes.js"
+        className="Card"
+        padding="xl"
+        shadow="xs"
+      >
         <Text>study notes</Text>
       </Paper>
 
-      <Paper className="Card" padding="xl" shadow="xs">
+      <Paper
+        component={Link}
+        to="src/pages/CollectionPages/BookCollection.js"
+        className="Card"
+        padding="xl"
+        shadow="xs"
+      >
         <Text>book library</Text>
       </Paper>
 
-      <Paper className="Card" padding="xl" shadow="xs">
+      <Paper
+        component={Link}
+        to="src/pages/CollectionPages/GeneralNotes.js"
+        className="Card"
+        padding="xl"
+        shadow="xs"
+      >
         <Text>general notes</Text>
       </Paper>
     </div>
