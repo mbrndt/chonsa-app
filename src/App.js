@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
@@ -13,6 +12,7 @@ import { RecipeCollection } from "./pages/CollectionPages/RecipesCollection";
 import { StudyNotes } from "./pages/CollectionPages/StudyNotes";
 import { GeneralNotes } from "./pages/CollectionPages/GeneralNotes";
 import { BookCollection } from "./pages/CollectionPages/BookCollection";
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
   //
