@@ -12,7 +12,6 @@ import { PomodoroSettings } from "../components/Pomodoro-Timer/PomodoroSettings"
 import JournalQuill from "../components/journal";
 import { CalendarComp } from "../components/Calendar";
 import { CollectionBoxes } from "../components/CollectionBoxes";
-import { JournalPage } from "./JournalPage";
 //
 //
 

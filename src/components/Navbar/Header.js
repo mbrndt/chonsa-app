@@ -54,22 +54,18 @@ export const Header = () => {
         >
           <ul>
             <li>
-              <Link to="/page-one" onClick={menuToggleHandler}>
-                PageOne
+              <Link to="src/pages/JournalPage.js" onClick={menuToggleHandler}>
+                journal
               </Link>
             </li>
-            <li>
-              <Link to="/page-two" onClick={menuToggleHandler}>
-                PageTwo
-              </Link>
-            </li>
+
             <li>
               <Link to="/page-three" onClick={menuToggleHandler}>
-                PageThree
+                profile
               </Link>
             </li>
           </ul>
-          <button onClick={ctaClickHandler}>CTA Page</button>
+          <button onClick={ctaClickHandler}>change theme</button>
         </nav>
         <div className={classes.header__content__toggle}>
           {!menuOpen ? (
