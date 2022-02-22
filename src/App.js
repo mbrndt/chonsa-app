@@ -12,7 +12,7 @@ import { RecipeCollection } from "./pages/CollectionPages/RecipesCollection";
 import { StudyNotes } from "./pages/CollectionPages/StudyNotes";
 import { GeneralNotes } from "./pages/CollectionPages/GeneralNotes";
 import { BookCollection } from "./pages/CollectionPages/BookCollection";
-import { Navbar } from "./components/Navbar/Navbar";
+import { Header } from "./components/Navbar/Header";
 
 function App() {
   //
@@ -20,15 +20,13 @@ function App() {
   return (
     <div id="holder">
       <Router>
-        {/* Navbar Begin */}
-        <Navbar />
+        <Header />
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
-          {/* // Navbar End */}
           <Route path="src/pages/JournalPage.js" element={<JournalPage />} />
           {/* collection pages */}
           <Route
