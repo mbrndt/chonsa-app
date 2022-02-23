@@ -37,6 +37,12 @@ export const Pomodoro = () => {
     setSecondsLeft(secondsLeftRef.current);
   }
 
+  if (modeRef.current === "work") {
+    sound.play();
+  } else if (modeRef.current === "break") {
+    sound.play();
+  }
+
   useEffect(() => {
     function switchMode() {
       const nextMode = modeRef.current === "work" ? "break" : "work";
@@ -50,8 +56,6 @@ export const Pomodoro = () => {
 
       setSecondsLeft(nextSeconds);
       secondsLeftRef.current = nextSeconds;
-
-      sound.play();
     }
 
     const interval = setInterval(() => {
@@ -62,7 +66,7 @@ export const Pomodoro = () => {
         return switchMode();
       }
       tick();
-    }, 1000);
+    }, 100);
     return () => clearInterval(interval);
   }, [settingsInfo]);
 
