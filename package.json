@@ -21,6 +21,7 @@
     "dayjs": "^1.10.7",
     "draft-js": "^0.11.7",
     "firebase": "^9.6.6",
+    "howler": "^2.2.3",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.2",

@@ -6,9 +6,22 @@ import { CogIcon } from "../../pages/assets/icons/CogIcon";
 import { Pausebutton } from "../../pages/assets/Pausebutton";
 import { Playbutton } from "../../pages/assets/Playbutton";
 import { PomSettingsContext } from "../../context/PomSettingsContext";
+import { Howl, Howler } from "howler";
+import BellSound from "/Users/mareikebrandt/Desktop/projekte/react/chonsa_react/chonsa-app/src/pages/assets/Small-bell-ring-sound-effect.mp3";
+
 import("./PomodoroElements.css");
 
 export const Pomodoro = () => {
+  // Setup the new Howl.
+  const sound = new Howl({
+    src: [BellSound],
+  });
+
+  // Play the sound.
+
+  // Change global volume.
+  Howler.volume(0.5);
+
   const settingsInfo = useContext(PomSettingsContext);
 
   const [isPaused, setIsPaused] = useState(true);
@@ -23,6 +36,13 @@ export const Pomodoro = () => {
     secondsLeftRef.current--;
     setSecondsLeft(secondsLeftRef.current);
   }
+
+  if (modeRef.current === "work") {
+    sound.play();
+  } else if (modeRef.current === "break") {
+    sound.play();
+  }
+
   useEffect(() => {
     function switchMode() {
       const nextMode = modeRef.current === "work" ? "break" : "work";
@@ -46,7 +66,7 @@ export const Pomodoro = () => {
         return switchMode();
       }
       tick();
-    }, 1000);
+    }, 100);
     return () => clearInterval(interval);
   }, [settingsInfo]);
 
@@ -93,6 +113,7 @@ export const Pomodoro = () => {
               setIsPaused(false);
               isPausedRef.current = false;
               toast.success("let's go!");
+              // sound.play();
             }}
           />
         ) : (

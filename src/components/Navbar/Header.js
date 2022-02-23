@@ -60,6 +60,12 @@ export const Header = () => {
             </li>
 
             <li>
+              <Link to="/about" onClick={menuToggleHandler}>
+                about
+              </Link>
+            </li>
+
+            <li>
               <Link to="/page-three" onClick={menuToggleHandler}>
                 profile
               </Link>
