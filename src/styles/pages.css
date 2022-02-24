@@ -1,0 +1,187 @@
+/* colour variables for changing colour aesthetics */
+
+/* lavender colour aesthetics */
+:root {
+  --lav_pink: #f1e8ef;
+  --lav_light_gray: #e8e9f1;
+  --lav_light_blue: #cbd0e7;
+  --lav_evenmorelight_blue: #c6d6ec;
+}
+
+/* white colour aesthetics */
+
+/*  earth colour aesthetics */
+
+#wrapper {
+  background-color: white;
+}
+
+/* Homepage                                            */
+
+.basic-outline {
+  display: flex;
+  height: 150vh;
+  align-items: flex-start;
+  padding-bottom: 20%;
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4 {
+  margin: 2%;
+  /* border: 3px solid #e8e9f1; */
+  border-radius: 25px;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 calc(25% - 1em);
+}
+
+img {
+  border-radius: 5%;
+}
+
+/* calendar      beginning                          */
+
+.calendar {
+  background-color: var(--lav_pink);
+  padding: 5% 0% 0% 0%;
+  border-radius: 5%;
+}
+
+#calendar--comp {
+  padding: 2rem;
+  margin: 1rem;
+}
+/* calendar   end                             */
+
+/* journal beginning                               */
+
+#journal {
+  background-color: var(--lav_light_gray);
+  margin: 10% 0% 0% 0%;
+  border-radius: 5%;
+  padding: 1em;
+}
+
+.text-box {
+  background-color: var(--lav_evenmorelight_blue);
+  /* display: inline-block; */
+  /* align-items: center; */
+  margin-bottom: 1rem;
+}
+
+/* journal end                               */
+
+#task-box {
+  background-color: var(--lav_light_gray);
+  width: 100%;
+  height: 60%;
+  border-radius: 5%;
+  padding: 5% 0% 5% 0%;
+}
+
+#cleaning-zone {
+  background-color: var(--lav_light_gray);
+  width: 100%;
+  height: 60%;
+  margin: 20% 0% 0% 0%;
+  border-radius: 5%;
+  padding: 5% 0% 5% 0%;
+}
+
+#collection-boxes {
+  background-color: var(--lav_light_blue);
+  width: 100%;
+  height: 60%;
+  margin: 20% 0% 0% 0%;
+  border-radius: 5%;
+  padding: 5% 0% 5% 0%;
+}
+
+#pomodoro-timer {
+  background-color: var(--lav_pink);
+  width: 100%;
+  height: 60%;
+  margin: 20% 0% 0% 0%;
+  border-radius: 5%;
+  padding: 5% 0% 5% 0%;
+}
+
+#mood-tracker {
+  background-color: #e8e9f1;
+  width: 100%;
+  height: 30%;
+  border-radius: 5%;
+  padding: 5% 0% 5% 0%;
+}
+
+#water-tracker {
+  background-color: #e8e9f1;
+  width: 100%;
+  height: 30%;
+  margin: 20% 0% 20% 0%;
+  border-radius: 5%;
+  padding: 5% 0% 5% 0%;
+}
+
+/* Sign In + Sign Up Page                                       */
+
+.signin-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: auto;
+  position: relative;
+
+  margin-bottom: -110px;
+
+  padding-bottom: 2.5rem;
+  background-color: white;
+  border: 3px solid blueviolet;
+}
+
+#signup-box,
+#signin-box {
+  width: 100px;
+  height: 100px;
+}
+
+#signin-box {
+  background-color: var(--lav_pink);
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  border-radius: 5%;
+}
+
+#signup-box {
+  background-color: var(--lav_evenmorelight_blue);
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  border-radius: 5%;
+}
+#sns-auth {
+  display: flex;
+  justify-content: space-around;
+}
+
+.loader {
+  border: 10px solid var(--lav_evenmorelight_blue);
+  border-top: 10px solid var(--lav_light_gray);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
