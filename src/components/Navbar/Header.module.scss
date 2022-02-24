@@ -92,10 +92,20 @@
           }
         }
       }
+
+      .classes.header_content_button {
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid green;
+        width: 3rems;
+      }
       button {
         cursor: pointer;
         outline: none;
-        padding: 0.3rem 1rem;
+        padding: 0.5rem 0.6rem;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
         border-radius: $borderRadius;
         font-size: 1rem;
         font-family: inherit;

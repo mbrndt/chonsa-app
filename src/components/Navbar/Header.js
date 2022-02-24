@@ -5,6 +5,10 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import classes from "./Header.module.scss";
 import { Link, useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firebase";
+
+import { Logout } from "../Logout";
 
 export const Header = () => {
   const history = useNavigate();
@@ -41,6 +45,11 @@ export const Header = () => {
     history.push("/page-cta");
   };
 
+  const [user, setUser] = useState({});
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
   return (
     <header className={classes.header}>
       <div className={classes.header__content}>
@@ -64,14 +73,17 @@ export const Header = () => {
                 about
               </Link>
             </li>
-
             <li>
               <Link to="/page-three" onClick={menuToggleHandler}>
                 profile
               </Link>
             </li>
+            <li> logged in as {user?.email}</li>
           </ul>
-          <button onClick={ctaClickHandler}>change theme</button>
+          <ul>
+            <button onClick={ctaClickHandler}>change theme</button>
+            <Logout />
+          </ul>
         </nav>
         <div className={classes.header__content__toggle}>
           {!menuOpen ? (
