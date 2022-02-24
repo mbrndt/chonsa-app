@@ -6,9 +6,23 @@ body {
   min-height: 93%;
 }
 
-#holder {
-  min-height: 93%;
-  position: relative;
+button {
+  cursor: pointer;
+  outline: none;
+  border: 5px solid black;
+  font-size: 1rem;
+  font-family: inherit;
+  color: black;
+  transition: 0.3s ease all;
+  text-decoration: none;
+
+  background-color: whitesmoke;
+  font: gray;
+}
+button:hover {
+  border-color: #b5b1d1;
+  background: rgba(#b5b1d1, 0.1);
+  color: rgb(162, 162, 246);
 }
 
 .loader {
