@@ -1,13 +1,17 @@
 import { React, useState, useEffect } from "react";
 import { RichTextEditor } from "@mantine/rte";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Divider, ScrollArea, Button } from "@mantine/core";
-import "../pages/JournalPage.css";
-import { db } from "/Users/mareikebrandt/Desktop/projekte/react/chonsa_react/chonsa-app/src/firebase.js";
-import { collection, getDocs } from "firebase/firestore";
+import "../styles/JournalPage.css";
+import {
+  auth,
+  db,
+} from "/Users/mareikebrandt/Desktop/projekte/react/chonsa_react/chonsa-app/src/firebase.js";
+import { addDoc, collection, getDocs, Timestamp } from "firebase/firestore";
+import { DatePicker } from "@mantine/dates";
 
-export const JournalPage = () => {
+export const JournalPage = ({ isAuth }) => {
   const [journalEntry, setJournalEntry] = useState([]);
   const journalCollectionRef = collection(db, "journalEntry");
 
@@ -18,6 +22,26 @@ export const JournalPage = () => {
     };
     getJournal();
   }, []);
+  const [title, setTitle] = useState("");
+  const [content, setContentText] = useState("");
+
+  let navigate = useNavigate();
+
+  const createPost = async () => {
+    await addDoc(journalCollectionRef, {
+      title,
+      content,
+
+      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+    });
+    window.location.reload();
+  };
+
+  useEffect(() => {
+    if (!isAuth) {
+      navigate("/login");
+    }
+  }, []);
   return (
     <>
       <div className="journal_top">
@@ -26,18 +50,34 @@ export const JournalPage = () => {
         </Link>
         <h1 id="journal_header">journal</h1>
       </div>
+
       <div className="journal_body">
         <div></div>
         <ScrollArea className="journal" type="always" offsetScrollbars>
           {
-            <div className="journal">
-              {/* <div>{Date}</div> */}
+            <div className="journal" style={{ fontFamily: "Josefine Sans" }}>
               <p>new entry:</p>
+              {/* <DatePicker placeholder="Pick date" label="date" /> */}
 
-              <RichTextEditor placeholder={"Write here"} />
               <div>
-                <button className=" button save-button">save</button>
+                <label> Title:</label>
+                <input
+                  placeholder="Title..."
+                  onChange={(event) => {
+                    setTitle(event.target.value);
+                  }}
+                />
               </div>
+              <div className="inputGp">
+                <label> Post:</label>
+                <textarea
+                  placeholder="Post..."
+                  onChange={(event) => {
+                    setContentText(event.target.value);
+                  }}
+                />
+              </div>
+              <button onClick={createPost}> Submit Post</button>
             </div>
           }
         </ScrollArea>
@@ -49,9 +89,10 @@ export const JournalPage = () => {
               {journalEntry.map((journal) => {
                 return (
                   <div>
-                    {/* <h1>date: {journal.date}</h1> */}
-                    <p> {journal.content}</p>
                     <Divider />
+                    {/* <p>date: {journal.Timestamp}</p> */}
+                    <p>{journal.title}</p>
+                    <p> {journal.content}</p>
                   </div>
                 );
               })}

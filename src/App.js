@@ -19,6 +19,8 @@ import { Header } from "./components/Navbar/Header";
 import "./App.css";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
+import CreatePost from "./pages/CreatePost";
+
 function App() {
   //
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -46,6 +48,12 @@ function App() {
         </nav>
 
         <Routes>
+          <Route
+            path="/createpost"
+            exact
+            element={<CreatePost isAuth={isAuth} />}
+          />
+
           <Route path="*" exact element={<PageNotFound />} />
           <Route path="/" exact element={<Home isAuth={isAuth} />} />
           <Route path="/about" element={<About />} />
@@ -77,9 +85,8 @@ function App() {
             element={<StudyNotes isAuth={isAuth} />}
           />
         </Routes>
-
-        <Toaster />
       </Router>
+      <Toaster />
     </div>
   );
 }

@@ -5,6 +5,12 @@ body {
   background-color: white;
   min-height: 93%;
 }
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@900&display=swap");
+
+*,
+textarea {
+  font-family: "Josefine Sans", sans-serif;
+}
 
 button {
   cursor: pointer;
