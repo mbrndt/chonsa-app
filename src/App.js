@@ -13,6 +13,7 @@ import { StudyNotes } from "./pages/CollectionPages/StudyNotes";
 import { GeneralNotes } from "./pages/CollectionPages/GeneralNotes";
 import { BookCollection } from "./pages/CollectionPages/BookCollection";
 import { Header } from "./components/Navbar/Header";
+import { PageNotFound } from "./pages/PageNotFound";
 
 function App() {
   //
@@ -22,6 +23,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route path="*" exact element={<PageNotFound />} />
+
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
