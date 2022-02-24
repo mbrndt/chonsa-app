@@ -125,49 +125,6 @@ img {
   padding: 5% 0% 5% 0%;
 }
 
-/* Sign In + Sign Up Page                                       */
-
-.signin-outline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: auto;
-  position: relative;
-
-  margin-bottom: -110px;
-
-  padding-bottom: 2.5rem;
-  background-color: white;
-  border: 3px solid blueviolet;
-}
-
-#signup-box,
-#signin-box {
-  width: 100px;
-  height: 100px;
-}
-
-#signin-box {
-  background-color: var(--lav_pink);
-  width: 100%;
-  height: auto;
-  margin-top: 2%;
-  border-radius: 5%;
-}
-
-#signup-box {
-  background-color: var(--lav_evenmorelight_blue);
-  width: 100%;
-  height: auto;
-  margin-top: 2%;
-  border-radius: 5%;
-}
-#sns-auth {
-  display: flex;
-  justify-content: space-around;
-}
-
 .loader {
   border: 10px solid var(--lav_evenmorelight_blue);
   border-top: 10px solid var(--lav_light_gray);
