@@ -9,20 +9,18 @@ body {
 button {
   cursor: pointer;
   outline: none;
-  border: 5px solid black;
+  /* border: 5px solid black; */
   font-size: 1rem;
   font-family: inherit;
-  color: black;
   transition: 0.3s ease all;
   text-decoration: none;
-
-  background-color: whitesmoke;
-  font: gray;
+  color: #cbd0e7;
+  background-color: transparent;
 }
 button:hover {
   border-color: #b5b1d1;
   background: rgba(#b5b1d1, 0.1);
-  color: rgb(162, 162, 246);
+  color: #8c7284;
 }
 
 .loader {
