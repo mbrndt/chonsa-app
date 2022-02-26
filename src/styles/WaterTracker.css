@@ -1,0 +1,4 @@
+.cloudBox {
+  display: flex;
+  justify-content: space-between;
+}

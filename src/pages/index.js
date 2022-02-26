@@ -12,6 +12,7 @@ import { PomodoroSettings } from "../components/Pomodoro-Timer/PomodoroSettings"
 import JournalQuill from "../components/journal";
 import { CalendarComp } from "../components/Calendar";
 import { CollectionBoxes } from "../components/CollectionBoxes";
+import { WaterTracker } from "../components/WaterTracker";
 //
 //
 
@@ -118,7 +119,10 @@ const Home = () => {
 
         <div className="grid_4">
           <div id="mood-tracker">mood tracker</div>
-          <div id="water-tracker">water tracker</div>
+          <div id="water-tracker">
+            <p>water tracker</p>
+            <WaterTracker />
+          </div>
           <div className="picture">
             <img
               src={require("./assets/pictures/lav_desktop_img.jpg")}
