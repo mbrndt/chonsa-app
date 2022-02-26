@@ -9,6 +9,7 @@
     padding: 0 3rem;
   }
   transition: 0.3s ease all;
+  font-family: "Josefin Sans", sans-serif;
 
   &__content {
     overflow: hidden;
@@ -21,6 +22,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 100;
+    font-family: "Josefin Sans", sans-serif;
 
     &__logo {
       font-size: 2rem;

@@ -1,15 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@900&display=swap");
 html,
 body {
   margin: 0;
   padding: 0;
   background-color: white;
   min-height: 93%;
+  font-family: "Josefine Sans", sans-serif;
 }
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@900&display=swap");
 
 *,
 textarea {
-  font-family: "Josefine Sans", sans-serif;
 }
 
 button {
