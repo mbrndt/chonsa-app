@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/chonsa-app/static/css/main.aaf11321.css",
+    "main.js": "/chonsa-app/static/js/main.9cdf9ab8.js",
+    "static/js/787.9918f229.chunk.js": "/chonsa-app/static/js/787.9918f229.chunk.js",
+    "static/media/lav_clouds_img.jpg": "/chonsa-app/static/media/lav_clouds_img.2d95e49b59c72fa653f0.jpg",
+    "static/media/lav_desktop_img.jpg": "/chonsa-app/static/media/lav_desktop_img.9eb55645e2b135c208d3.jpg",
+    "static/media/Small-bell-ring-sound-effect.mp3": "/chonsa-app/static/media/Small-bell-ring-sound-effect.1b829bf62176a311f12e.mp3",
+    "index.html": "/chonsa-app/index.html",
+    "main.aaf11321.css.map": "/chonsa-app/static/css/main.aaf11321.css.map",
+    "main.9cdf9ab8.js.map": "/chonsa-app/static/js/main.9cdf9ab8.js.map",
+    "787.9918f229.chunk.js.map": "/chonsa-app/static/js/787.9918f229.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aaf11321.css",
+    "static/js/main.9cdf9ab8.js"
+  ]
+}
