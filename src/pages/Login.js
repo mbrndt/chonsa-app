@@ -70,12 +70,14 @@ export const Login = ({ setIsAuth }) => {
         <div className="inputGp login">
           <h3> Login</h3>
           <input
+            type={"text"}
             placeholder="Email..."
             onChange={(event) => {
               setLoginEmail(event.target.value);
             }}
           />
           <input
+            type={"password"}
             placeholder="Password..."
             onChange={(event) => {
               setLoginPassword(event.target.value);
