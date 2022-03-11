@@ -1,0 +1,31 @@
+.trackerbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trackerbox.buttons {
+  display: flex;
+  flex-direction: row;
+  height: 15rem;
+  width: 10rem;
+}
+
+.trackerbox.moodselect {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+button.heartbutton {
+  margin: 1rem;
+}
+
+button:disabled {
+  cursor: default;
+  color: #848db5;
+}
+
+button:disabled:hover {
+  color: #61688b;
+}

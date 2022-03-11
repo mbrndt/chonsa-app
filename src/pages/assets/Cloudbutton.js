@@ -1,6 +1,6 @@
 import React from "react";
 import "../../components/WaterTracker";
-import "../../styles/WaterTracker.css";
+import "../../styles/Tracker.css";
 
 export const Cloudbutton = (props) => {
   return (

@@ -16,8 +16,8 @@ export const PomodoroSettings = () => {
           trackClassName={"track"}
           value={settingsInfo.workMinutes}
           onChange={(newValue) => settingsInfo.setWorkMinutes(newValue)}
-          min={"1"}
-          max={"120"}
+          min={1}
+          max={120}
         />
         <label>break minutes: {settingsInfo.breakMinutes}:00</label>
         <ReactSlider
@@ -26,8 +26,8 @@ export const PomodoroSettings = () => {
           trackClassName={"track"}
           value={settingsInfo.breakMinutes}
           onChange={(newValue) => settingsInfo.setBreakMinutes(newValue)}
-          min={"1"}
-          max={"120"}
+          min={1}
+          max={120}
         />
         <div className="Backbutton">
           <Backbutton onClick={() => settingsInfo.setShowSettings(false)} />

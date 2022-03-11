@@ -13,6 +13,7 @@ import JournalQuill from "../components/journal";
 import { CalendarComp } from "../components/Calendar";
 import { CollectionBoxes } from "../components/CollectionBoxes";
 import { WaterTracker } from "../components/WaterTracker";
+import { MoodTracker } from "../components/MoodTracker";
 //
 //
 
@@ -70,17 +71,16 @@ const Home = () => {
 
         <div className="grid_2">
           <div id="task-box">
-            task box
-            <p>
-              <div>
-                <Container>
-                  18.12.2021 Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Aliquam, aenean morbi quisque luctus in habitant elit
-                  nibh pellentesque. Dignissim ut ultrices euismod nunc cras
-                  elementum faucibus dolor.
-                </Container>
-              </div>
-            </p>
+            <p> task box</p>
+
+            <div>
+              <Container>
+                18.12.2021 Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Aliquam, aenean morbi quisque luctus in habitant elit nibh
+                pellentesque. Dignissim ut ultrices euismod nunc cras elementum
+                faucibus dolor.
+              </Container>
+            </div>
           </div>
           <div id="cleaning-zone">
             {" "}
@@ -118,7 +118,10 @@ const Home = () => {
         </div>
 
         <div className="grid_4">
-          <div id="mood-tracker">mood tracker</div>
+          <div id="mood-tracker">
+            <p>mood tracker</p>
+            <MoodTracker />
+          </div>
           <div id="water-tracker">
             <p>water tracker</p>
             <WaterTracker />
