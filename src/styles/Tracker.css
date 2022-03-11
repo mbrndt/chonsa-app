@@ -18,6 +18,14 @@
   justify-content: flex-start;
 }
 
+button.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 40%;
+}
+
 button.sad {
   color: green;
 }
