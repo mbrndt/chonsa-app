@@ -1,20 +1,38 @@
 .trackerbox {
   display: flex;
   justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 2%;
 }
 
-.trackerbox.buttons {
+.trackerbox.heartbuttons {
   display: flex;
   flex-direction: row;
-  height: 15rem;
   width: 10rem;
 }
 
 .trackerbox.moodselect {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+button.sad {
+  color: green;
+}
+
+button.happy {
+  color: blue;
+}
+button.grumpy {
+  color: red;
+}
+button.neutral {
+  color: yellow;
+}
+button.exited {
+  color: pink;
 }
 
 button.heartbutton {
