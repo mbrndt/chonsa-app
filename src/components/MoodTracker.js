@@ -38,11 +38,18 @@ export const MoodTracker = () => {
   return (
     <div className="trackerbox buttons">
       <div className="trackerbox heartbutton">
-        <Heartbutton>today</Heartbutton>
+        <Heartbutton
+          disabled
+          styles={{
+            backgroundColour: currentMood === "happy" ? `#d6d6d6` : "#8C7284",
+          }}
+        >
+          today
+        </Heartbutton>
 
         <div className="trackerbox moodselect">
           <Heartbutton
-            className="heartbutton"
+            className="happy"
             disabled={button1Pushed}
             onClick={() => {
               setButton1Pushed(true);
@@ -54,7 +61,7 @@ export const MoodTracker = () => {
           />
 
           <Heartbutton
-            className="heartbutton"
+            className="sad"
             disabled={button2Pushed}
             onClick={() => {
               setButton2Pushed(true);
@@ -67,7 +74,7 @@ export const MoodTracker = () => {
           </Heartbutton>
 
           <Heartbutton
-            className="heartbutton"
+            className="grumpy"
             disabled={button3Pushed}
             onClick={() => {
               setButton3Pushed(true);
@@ -79,7 +86,7 @@ export const MoodTracker = () => {
 
           <Heartbutton
             label="happy"
-            className="heartbutton"
+            className="neutral"
             disabled={button4Pushed}
             onClick={() => {
               setButton4Pushed(true);
@@ -90,7 +97,7 @@ export const MoodTracker = () => {
           />
 
           <Heartbutton
-            className="heartbutton"
+            className="exited"
             disabled={button5Pushed}
             onClick={() => {
               setButton5Pushed(true);
