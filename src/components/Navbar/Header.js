@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import { Modal, Button, Group } from "@mantine/core";
 
 import classes from "./Header.module.scss";
 import { Link, useNavigate } from "react-router-dom";
@@ -16,6 +17,8 @@ export const Header = () => {
   //
   // useState
   const [menuOpen, setMenuOpen] = useState(false);
+  const [opened, setOpened] = useState(false);
+
   const [size, setSize] = useState({
     width: undefined,
     height: undefined,
@@ -55,6 +58,7 @@ export const Header = () => {
     menuToggleHandler();
     history.push("/page-cta");
   };
+
   //
 
   return (
@@ -99,7 +103,42 @@ export const Header = () => {
             <li> logged in as {user?.email}</li>
           </ul>
           <ul>
-            <button onClick={ctaClickHandler}>change theme</button>
+            <Modal
+              opened={opened}
+              onClose={() => setOpened(false)}
+              title="change the theme here:"
+            >
+              <Button
+                id="hero-btn1"
+                variant="primary"
+                onClick={() =>
+                  document.body.setAttribute("data-theme", "light-theme")
+                }
+              >
+                lavender
+              </Button>
+              <Button
+                id="hero-btn2"
+                variant="secondary"
+                onClick={() =>
+                  document.body.setAttribute("data-theme", "translucent-theme")
+                }
+              >
+                translucent
+              </Button>
+              <Button
+                id="hero-btn3"
+                variant="success"
+                onClick={() =>
+                  document.body.setAttribute("data-theme", "earth-theme")
+                }
+              >
+                earth{" "}
+              </Button>
+            </Modal>
+            <Group position="center">
+              <Button onClick={() => setOpened(true)}>change theme</Button>
+            </Group>
           </ul>
         </nav>
         <div className={classes.header__content__toggle}>
