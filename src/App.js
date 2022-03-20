@@ -1,4 +1,7 @@
 import { Toaster } from "react-hot-toast";
+import Category from "./components/Category";
+import Search from "./components/Search";
+import Pages from "./pages/CollectionPages/Pages";
 // react
 import { React, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -85,7 +88,12 @@ function App() {
             element={<StudyNotes isAuth={isAuth} />}
           />
         </Routes>
+
+        <Category />
+        <Search />
+        <Pages />
       </Router>
+
       <Toaster />
     </div>
   );

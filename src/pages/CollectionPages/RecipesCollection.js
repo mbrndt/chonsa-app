@@ -1,19 +1,14 @@
 import React from "react";
-import { Paper, Text } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { Popular } from "../../components/Popular";
+import { Veggie } from "../../components/Veggie";
 
 export const RecipeCollection = () => {
   return (
     <div>
-      <Paper
-        component={Link}
-        to="src/pages/contact.js"
-        className="Card"
-        padding="xl"
-        shadow="xs"
-      >
-        <Text>recipe</Text>
-      </Paper>
+      <div>
+        <Veggie />
+        <Popular />
+      </div>
     </div>
   );
 };
