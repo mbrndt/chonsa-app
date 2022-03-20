@@ -50,6 +50,11 @@ function App() {
           )}
         </nav>
 
+        {/* recipe-collection */}
+        <Category />
+        <Search />
+        <Pages />
+
         <Routes>
           <Route
             path="/createpost"
@@ -88,10 +93,6 @@ function App() {
             element={<StudyNotes isAuth={isAuth} />}
           />
         </Routes>
-
-        <Category />
-        <Search />
-        <Pages />
       </Router>
 
       <Toaster />

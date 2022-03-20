@@ -8,10 +8,10 @@ import Recipe from "./Recipe";
 function Pages() {
   return (
     <Routes>
-      <Route
+      {/* <Route
         path="src/pages/CollectionPages/RecipesCollection.js"
         element={<RecipeCollection />}
-      />
+      /> */}
       <Route path="/cuisine/:type" element={<Cuisine />} />
       <Route path="/searched/:search" element={<Searched />} />
       <Route path="/recipe/:name" element={<Recipe />} />
