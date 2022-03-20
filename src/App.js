@@ -50,10 +50,11 @@ function App() {
           )}
         </nav>
 
-        {/* recipe-collection */}
+        {/* recipe-collection routing begin */}
         <Category />
         <Search />
         <Pages />
+        {/* recipe-collection routing end */}
 
         <Routes>
           <Route
