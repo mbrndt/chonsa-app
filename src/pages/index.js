@@ -14,6 +14,7 @@ import { CalendarComp } from "../components/Calendar";
 import { CollectionBoxes } from "../components/CollectionBoxes";
 import { WaterTracker } from "../components/WaterTracker";
 import { MoodTracker } from "../components/MoodTracker";
+import { Taskbox } from "./Taskbox";
 //
 //
 
@@ -75,10 +76,7 @@ const Home = () => {
 
             <div>
               <Container>
-                18.12.2021 Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Aliquam, aenean morbi quisque luctus in habitant elit nibh
-                pellentesque. Dignissim ut ultrices euismod nunc cras elementum
-                faucibus dolor.
+                <Taskbox />
               </Container>
             </div>
           </div>
