@@ -90,7 +90,7 @@ export const JournalPage = ({ isAuth }) => {
                 return (
                   <div>
                     <Divider />
-                    {/* <p>date: {journal.Timestamp}</p> */}
+                    {/* <p>date: {journal.time}</p> */}
                     <p>{journal.title}</p>
                     <p> {journal.content}</p>
                   </div>

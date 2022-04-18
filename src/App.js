@@ -51,9 +51,9 @@ function App() {
         </nav>
 
         {/* recipe-collection routing begin */}
-        {/* <Category />
+        <Category />
         <Search />
-        <Pages /> */}
+        <Pages />
         {/* recipe-collection routing end */}
 
         <Routes>
